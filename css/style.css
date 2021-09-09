@@ -137,6 +137,10 @@ input {
   outline: none;
 }
 
+.main {
+    overflow-x: hidden;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 4.5rem 0 2.5rem;
@@ -386,23 +390,64 @@ input {
 }
 
 .about__img-overlay {
-    overflow: var(--img-hidden);
+  overflow: var(--img-hidden);
 }
 
 .about__img-one {
-    width: 130px;
+  width: 130px;
 }
 
 .about__img-two {
-    width: 180px;
+  width: 180px;
 }
 
 .about__img-one,
 .about__img-two {
-    transition: var(--img-transition);
+  transition: var(--img-transition);
 }
 
 .about__img-one:hover,
 .about__img-two:hover {
+  transform: var(--img-scale);
+}
+
+/*=================== DISCOVER ===================*/
+.discover__card {
+  position: relative;
+  width: 200px;
+  overflow: var(--img-hidden);
+}
+
+.discover__data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.discover__title,
+.discover__description {
+  color: var(--white-color);
+}
+
+.discover__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.discover__description {
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+
+.discover__img {
+    transition: var(--img-transition);
+}
+
+.discover__img:hover {
     transform: var(--img-scale);
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
 }
